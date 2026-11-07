@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kerem Ensarioğlu, MD — Pulmonary Medicine, Ankara</title>
 <meta name="description" content="Kerem Ensarioğlu, MD — Associate Professor of Pulmonary Medicine in Ankara: interventional pulmonology, lung cancer, interstitial lung disease, clinical database research.">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0F171D">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="https://keremensarioglu.com/">
 <link rel="icon" href="data:,">
@@ -65,101 +66,164 @@
   ]
 }
 </script>
+<link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face { font-family: Archivo; src: url("fonts/archivo-var.woff2") format("woff2"); font-weight: 400 800; font-stretch: 62% 125%; font-style: normal; font-display: swap; }
+@font-face { font-family: Archivo; src: url("fonts/archivo-italic-var.woff2") format("woff2"); font-weight: 400 800; font-stretch: 62% 125%; font-style: italic; font-display: swap; }
 :root {
-  --bg: #ffffff;
-  --fg: #1f2429;
-  --muted: #545d66;
-  --accent: #2c5b8a;
-  --accent-fg: #ffffff;
-  --rule: #d9dee3;
+  --bg: #0F171D;
+  --glow: #1C2C35;
+  --ink: #DDE7EB;
+  --slate: #93A7B0;
+  --panel: #13202A;
+  --panel-2: #101A21;
+  --tile: #0A1015;
+  --rule: #23323B;
+  --rule-2: #34474F;
+  --text-2: #C3D1D6;
+  --text-3: #B3C3C9;
+  --amber: #E8B44A;
+  --marker: #C9D8DE;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #15191d;
-    --fg: #e4e7ea;
-    --muted: #a9b2bb;
-    --accent: #8fb7de;
-    --accent-fg: #15191d;
-    --rule: #30373e;
-  }
-}
-*, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html { background: var(--bg); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   margin: 0;
+  min-height: 100vh;
   background: var(--bg);
-  color: var(--fg);
-  font: 1rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: var(--ink);
+  font-family: Archivo, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
-.wrap { max-width: 45rem; margin: 0 auto; padding: 0 1rem; }
-.top { display: flex; justify-content: flex-end; padding-top: 1rem; min-height: 3.25rem; }
-a { color: var(--accent); text-underline-offset: 0.15em; }
+a { color: var(--ink); text-underline-offset: 0.2em; text-decoration-thickness: 1px; text-decoration-color: var(--amber); }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-button {
-  font: inherit;
-  font-size: 0.9375rem;
-  color: var(--accent);
-  background: transparent;
-  border: 1px solid var(--accent);
-  border-radius: 4px;
-  padding: 0.25rem 0.75rem;
-  cursor: pointer;
-}
-button:hover { background: var(--accent); color: var(--accent-fg); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 2px; }
 [hidden] { display: none !important; }
-h1 { font-size: 1.875rem; line-height: 1.25; margin: 0.5rem 0 0.5rem; font-weight: 650; }
-h2 {
-  font-size: 1.1875rem;
-  line-height: 1.3;
-  margin: 2.25rem 0 0.75rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--rule);
-  font-weight: 650;
+.sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+/* header */
+.hero { background: radial-gradient(ellipse 60% 70% at 72% 45%, var(--glow) 0%, var(--bg) 70%); }
+.top { display: flex; justify-content: flex-end; padding-top: 20px; min-height: 44px; }
+#lang { font: inherit; font-size: 15px; min-height: 44px; padding: 8px 18px; background: transparent; color: var(--ink); border: 1px solid var(--rule-2); border-radius: 4px; cursor: pointer; }
+.hd { display: flex; flex-wrap: wrap; align-items: center; gap: 40px 64px; padding: 24px 0 72px; }
+.hd-text { flex: 1 1 460px; min-width: 0; }
+h1 { margin: 0 0 24px; font-weight: 700; font-stretch: 72%; font-size: clamp(56px, 9vw, 112px); line-height: 0.95; letter-spacing: -0.01em; }
+.role { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+.inst { margin: 0 0 32px; max-width: 520px; color: var(--slate); line-height: 1.5; }
+.links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.links .cv { color: var(--amber); font-weight: 600; }
+.film { flex: 1 1 360px; max-width: 480px; margin: 0; position: relative; }
+.side { position: absolute; top: 0; right: 0; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 2px solid var(--marker); border-radius: 4px; font-weight: 800; font-size: 20px; color: var(--marker); }
+.film figcaption { margin-top: 14px; font-size: 13px; color: var(--slate); }
+.lb-route { filter: drop-shadow(0 0 5px rgba(235, 248, 255, 0.9)); stroke-dasharray: 324; stroke-dashoffset: 324; animation: lbdraw 2.6s cubic-bezier(0.45, 0.05, 0.25, 1) 0.4s forwards; }
+.lb-mark { opacity: 0; animation: lbfade 0.7s ease-out 3s forwards; }
+@keyframes lbdraw { to { stroke-dashoffset: 0; } }
+@keyframes lbfade { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .lb-route { animation: none; stroke-dashoffset: 0; }
+  .lb-mark { animation: none; opacity: 1; }
 }
-h3 { font-size: 1rem; margin: 1.5rem 0 0.5rem; font-weight: 650; }
-p { margin: 0 0 0.75rem; }
-.role { font-size: 1.0625rem; margin: 0 0 0.25rem; }
-.inst { color: var(--muted); margin: 0 0 1rem; }
-.links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.125rem; }
-.lead { font-size: 1.0625rem; margin-top: 2rem; }
-ul.plain { margin: 0; padding-left: 1.25rem; }
-ul.plain li { margin-bottom: 0.5rem; }
-.pubs { margin: 0; padding-left: 1.5rem; }
-.pubs li { margin-bottom: 0.75rem; }
-.contact { list-style: none; margin: 1rem 0 0; padding: 0; }
-.contact li { margin-bottom: 0.5rem; }
-.btn {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  background: var(--accent);
-  color: var(--accent-fg);
-  text-decoration: none;
-  font-weight: 600;
-}
-.btn:hover { text-decoration: underline; }
-footer { margin: 3rem 0 0; padding: 1.25rem 0 2rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+
+/* lead and figures band */
+.intro { display: flex; flex-wrap: wrap; gap: 40px 64px; align-items: start; margin: 56px 0 80px; }
+.intro-lead { flex: 1 1 520px; min-width: 0; max-width: 760px; }
+.lead { margin: 0; font-size: 22px; line-height: 1.55; }
+.figs { flex: 1 1 300px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; list-style: none; margin: 0; padding: 0; }
+.figs li { padding: 14px 0 0; border-top: 2px solid var(--rule-2); }
+.figs li:first-child { border-top-color: var(--amber); }
+.fig-n { display: block; font-size: 64px; line-height: 1; font-weight: 800; font-stretch: 75%; font-variant-numeric: tabular-nums; color: var(--ink); }
+.fig-t { display: block; margin-top: 8px; font-size: 14px; line-height: 1.4; color: var(--slate); }
+
+/* sections */
+.sec { padding: 0 0 64px; }
+h2 { margin: 0 0 28px; font-weight: 700; font-stretch: 80%; font-size: 34px; line-height: 1.15; }
+.idx { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; height: 30px; margin-right: 14px; padding: 0 6px; border: 2px solid var(--rule-2); border-radius: 4px; font-size: 14px; font-weight: 700; font-stretch: 100%; color: var(--slate); vertical-align: 0.3em; font-variant-numeric: tabular-nums; }
+
+/* 01 what I do */
+.areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; background: var(--rule); border: 2px solid var(--rule); border-radius: 6px; overflow: hidden; }
+@media (max-width: 860px) { .areas { grid-template-columns: 1fr; } }
+.area { background: var(--panel); padding: 28px 28px 32px; }
+.area .tag { margin: 0 0 10px; font-size: 13px; color: var(--amber); }
+.area h3 { margin: 0 0 10px; font-weight: 700; font-stretch: 85%; font-size: 26px; line-height: 1.2; }
+.area .desc { margin: 0; color: var(--text-2); }
+.area.second { background: var(--panel-2); padding: 24px 28px 28px; }
+.area.second .tag { color: var(--slate); }
+.area.second h3 { margin: 0 0 8px; font-weight: 600; font-size: 21px; line-height: 1.25; }
+.area.second .desc { font-size: 15px; color: var(--text-3); }
+.area.wide { grid-column: 1 / -1; padding: 0; display: flex; flex-wrap: wrap; align-items: stretch; }
+.wide-text { flex: 1 1 280px; padding: 24px 28px 28px; align-self: center; }
+.plot { flex: 2 1 460px; position: relative; aspect-ratio: 3 / 1; background: var(--tile); border-left: 2px solid var(--rule); }
+.plot-tag { position: absolute; top: 12px; left: 12px; padding: 3px 8px; border-radius: 3px; background: rgba(10, 16, 21, 0.78); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-2); }
+.note { margin: 14px 0 0; font-size: 13px; color: var(--slate); }
+
+/* 02 credentials, 03 editorial work */
+.pair { display: flex; flex-wrap: wrap; gap: 48px 64px; padding: 0 0 64px; }
+.pair > section { flex: 1 1 420px; min-width: 0; }
+.pair h2 { margin-bottom: 22px; }
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--rule-2); }
+.timeline li { position: relative; padding: 0 0 22px 26px; }
+.timeline li:last-child { padding-bottom: 4px; }
+.timeline li::before { content: ""; position: absolute; left: -9px; top: 6px; width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; background: var(--bg); border: 2px solid var(--slate); }
+.timeline li.now::before { background: var(--amber); border-color: var(--amber); }
+.yr { display: block; font-weight: 700; color: var(--slate); font-variant-numeric: tabular-nums; }
+.timeline li.now .yr { color: var(--amber); }
+.ed { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.ed li { padding: 14px 18px; background: var(--panel); border-left: 3px solid var(--rule-2); border-radius: 4px; }
+.ed li.key { border-left-color: var(--amber); }
+.rtag { display: block; margin-bottom: 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); }
+.ed li.key .rtag { color: var(--amber); }
+
+/* 04 publications */
+.pubsec h2 { margin-bottom: 14px; }
+.pub-top { display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: end; margin: 0 0 34px; }
+.pub-sum { flex: 1 1 480px; min-width: 0; max-width: 760px; }
+.pub-sum p { margin: 0 0 8px; }
+.pub-sum p.also { margin: 0; color: var(--slate); }
+.chart { flex: 0 1 300px; min-width: 240px; margin: 0; }
+.chart figcaption { margin: 0 0 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate); }
+.bars { display: flex; gap: 14px; align-items: flex-end; height: 150px; padding: 0 4px; border-bottom: 2px solid var(--rule-2); }
+.bar { flex: 1 1 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; height: 100%; }
+.bar-v { font-size: 15px; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+.bar-b { display: block; width: 100%; max-width: 44px; min-height: 4px; border-radius: 4px 4px 0 0; background: var(--slate); }
+.bar-b.latest { background: var(--amber); }
+.yrs { display: flex; gap: 14px; padding: 8px 4px 0; }
+.yrs span { flex: 1 1 0; text-align: center; font-size: 13px; color: var(--slate); font-variant-numeric: tabular-nums; }
+.pubs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.pubs li { display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 18px 0; border-top: 1px solid var(--rule); }
+.pubs li:last-child { border-bottom: 1px solid var(--rule); }
+.py { flex: 0 0 56px; font-weight: 700; color: var(--slate); font-variant-numeric: tabular-nums; }
+.pb { flex: 1 1 480px; min-width: 0; }
+.chip { display: inline-block; margin: 0 0 8px; padding: 2px 10px; border: 1px solid var(--rule-2); border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--text-3); }
+.chip.key { border-color: var(--amber); color: var(--amber); }
+.pt { margin: 0 0 4px; font-weight: 600; font-size: 17px; line-height: 1.4; }
+.pa { margin: 0; font-size: 14px; color: var(--slate); }
+.pa strong { color: var(--ink); }
+
+/* 05 contact, footer */
+.contact { margin: 0 0 56px; padding: 40px; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; }
+.contact h2 { margin-bottom: 16px; }
+.cline { margin: 0 0 28px; max-width: 760px; font-size: 22px; line-height: 1.45; }
+.cta { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
+.lbl { color: var(--slate); }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 4px; background: var(--amber); color: var(--bg); font-weight: 700; text-decoration: none; }
+footer { padding: 0 0 40px; font-size: 14px; color: var(--slate); }
 footer p { margin: 0; }
-@media (min-width: 40rem) {
-  h1 { font-size: 2.25rem; }
-  .wrap { padding: 0 1.5rem; }
-}
 </style>
 </head>
 <body>
+<div class="hero">
 <div class="wrap">
 <div class="top">
 <button type="button" id="lang" lang="tr" aria-pressed="false" hidden>Türkçe</button>
 </div>
-<header>
+<header class="hd">
+<div class="hd-text">
 <h1><span data-l="en">Kerem Ensarioğlu, MD</span><span data-l="tr" hidden>Doç. Dr. Kerem Ensarioğlu</span></h1>
-<p class="role" data-l="en"><span lang="tr">Doç. Dr.</span> · Associate Professor of Pulmonary Medicine</p>
+<p class="role" data-l="en"><span lang="tr">Doç. Dr.</span>, Associate Professor of Pulmonary Medicine</p>
 <p class="role" data-l="tr" hidden>Göğüs Hastalıkları Doçenti</p>
-<p class="inst" data-l="en">Ankara Yenimahalle Training and Research Hospital (Ankara Yıldırım Beyazıt University) · Ankara, Türkiye</p>
-<p class="inst" data-l="tr" hidden>Ankara Yenimahalle Eğitim ve Araştırma Hastanesi (Ankara Yıldırım Beyazıt Üniversitesi) · Ankara, Türkiye</p>
+<p class="inst" data-l="en">Ankara Yenimahalle Training and Research Hospital (Ankara Yıldırım Beyazıt University), Ankara, Türkiye</p>
+<p class="inst" data-l="tr" hidden>Ankara Yenimahalle Eğitim ve Araştırma Hastanesi (Ankara Yıldırım Beyazıt Üniversitesi), Ankara, Türkiye</p>
 <ul class="links">
 <li><a href="https://orcid.org/0000-0002-0968-1549" rel="me">ORCID</a></li>
 <li><a href="https://scholar.google.com/citations?user=0OkTnxIAAAAJ">Google Scholar</a></li>
@@ -167,88 +231,146 @@ footer p { margin: 0; }
 <li><a href="https://www.webofscience.com/wos/author/record/QQA-7147-2026">Web of Science</a></li>
 <li><a href="https://www.researchgate.net/profile/Kerem-Ensarioglu-2">ResearchGate</a></li>
 <li><a href="https://www.linkedin.com/in/kerem-ensarioglu" rel="me">LinkedIn</a></li>
-<li><a href="cv.pdf"><span data-l="en">CV (PDF)</span><span data-l="tr" hidden>Özgeçmiş (PDF)</span></a></li>
+<li><a class="cv" href="cv.pdf"><span data-l="en">CV (PDF)</span><span data-l="tr" hidden>Özgeçmiş (PDF)</span></a></li>
 </ul>
+</div>
+<figure class="film">
+<span class="side" aria-hidden="true">L</span>
+<svg viewBox="-195 -30 380 380" width="100%" aria-hidden="true" focusable="false" style="display: block; height: auto; overflow: visible">
+<image href="data:image/avif;base64,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" x="-195" y="-30" width="380" height="380" preserveAspectRatio="none"></image>
+<path class="lb-route" style="filter: none" d="M0 -4 L0 128 L46 176 L60 152 L63.3 123.7 L67 121.7 L71.2 121.6 L75.3 120.6 L79.3 119.3 L83 117.3 L86.5 114.9 L90.3 113.3 L94.4 112.3 L98.5 111.2 L102.5 110 L106.4 108.5 L108.8 111.9" fill="none" stroke="#0F171D" stroke-opacity="0.7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path class="lb-route" d="M0 -4 L0 128 L46 176 L60 152 L63.3 123.7 L67 121.7 L71.2 121.6 L75.3 120.6 L79.3 119.3 L83 117.3 L86.5 114.9 L90.3 113.3 L94.4 112.3 L98.5 111.2 L102.5 110 L106.4 108.5 L108.8 111.9" fill="none" stroke="#F2F8FA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<g class="lb-mark">
+<circle cx="108.8" cy="111.9" r="4.2" fill="#F2F8FA"></circle>
+<circle cx="108.8" cy="111.9" r="13" fill="none" stroke="#0F171D" stroke-opacity="0.75" stroke-width="4"></circle>
+<circle cx="108.8" cy="111.9" r="13" fill="none" stroke="#E8B44A" stroke-width="1.5" stroke-dasharray="4 3"></circle>
+</g>
+</svg>
+<figcaption><span data-l="en">Illustration: route from the trachea to a peripheral nodule in the left upper lobe</span><span data-l="tr" hidden>Temsili görüntü: trakeadan sol üst lobdaki periferik nodüle giden yol</span></figcaption>
+</figure>
 </header>
+</div>
+</div>
 
+<div class="wrap">
 <main>
+<div class="intro">
+<div class="intro-lead">
 <p class="lead" data-l="en">Board-certified pulmonologist with nine years in Ministry of Health teaching hospitals, now a clinical educator in a pulmonary residency programme. Clinical focus: interventional pulmonology (EBUS-trained) and lung cancer, with interstitial lung disease as a second focus. Research joins that clinical focus to large-database methods: the health economics of lung cancer and IPF in Türkiye, prognostic indices in fibrotic lung disease, biomarker trajectories, and secondary analysis of MIMIC-IV and eICU.</p>
 <p class="lead" data-l="tr" hidden>Sağlık Bakanlığı eğitim ve araştırma hastanelerinde dokuz yıllık deneyime sahip, yeterlik belgeli göğüs hastalıkları uzmanı; şu anda bir göğüs hastalıkları uzmanlık eğitimi programında eğitim görevlisi. Klinik odak: girişimsel pulmonoloji (EBUS eğitimli) ve akciğer kanseri; ikinci odak interstisyel akciğer hastalıkları. Araştırmalarım bu klinik odağı büyük veri tabanı yöntemleriyle birleştirir: Türkiye’de akciğer kanseri ve İPF’nin sağlık ekonomisi, fibrotik akciğer hastalığında prognostik indeksler, biyobelirteç seyirleri ve MIMIC-IV ile eICU verilerinin ikincil analizi.</p>
+</div>
+<ul class="figs">
+<li><span class="fig-n">40</span><span class="fig-t"><span data-l="en">journal articles</span><span data-l="tr" hidden>dergi makalesi</span></span></li>
+<li><span class="fig-n">27</span><span class="fig-t"><span data-l="en">PubMed-indexed, 2022–2025</span><span data-l="tr" hidden>PubMed’de dizinli, 2022–2025</span></span></li>
+<li><span class="fig-n">9</span><span class="fig-t"><span data-l="en">years in Ministry of Health teaching hospitals</span><span data-l="tr" hidden>yıl, Sağlık Bakanlığı eğitim ve araştırma hastanelerinde</span></span></li>
+<li><span class="fig-n">4</span><span class="fig-t"><span data-l="en">ERS congress abstracts</span><span data-l="tr" hidden>ERS kongre bildirisi</span></span></li>
+</ul>
+</div>
 
-<section>
-<h2><span data-l="en">What I do</span><span data-l="tr" hidden>Çalışma alanlarım</span></h2>
-<ul class="plain" data-l="en">
-<li><strong>Interventional pulmonology</strong> — diagnostic and therapeutic bronchoscopy, EBUS, endobronchial coil lung-volume reduction, thoracic ultrasound</li>
-<li><strong>Lung cancer</strong> — diagnosis by bronchoscopy and EBUS; costs and reimbursement of lung cancer care in Türkiye</li>
-<li><strong>Interstitial lung disease</strong> — IPF and progressive pulmonary fibrosis, hypersensitivity pneumonitis, CTD-ILD, sarcoidosis; antifibrotic follow-up</li>
-<li><strong>Clinical database research</strong> — MIMIC-IV, eICU, PhysioNet resources; latent-class and trajectory models; STROBE/TRIPOD reporting</li>
-</ul>
-<ul class="plain" data-l="tr" hidden>
-<li><strong>Girişimsel pulmonoloji</strong> — tanısal ve tedavi amaçlı bronkoskopi, EBUS, endobronşiyal coil ile akciğer hacim küçültme, toraks ultrasonografisi</li>
-<li><strong>Akciğer kanseri</strong> — bronkoskopi ve EBUS ile tanı; Türkiye’de akciğer kanseri tedavisinin maliyeti ve geri ödemesi</li>
-<li><strong>İnterstisyel akciğer hastalıkları</strong> — İPF ve progresif pulmoner fibrozis, hipersensitivite pnömonisi, bağ dokusu hastalığına bağlı İAH, sarkoidoz; antifibrotik tedavi takibi</li>
-<li><strong>Klinik veri tabanı araştırmaları</strong> — MIMIC-IV, eICU, PhysioNet kaynakları; latent sınıf ve seyir (trajectory) modelleri; STROBE/TRIPOD raporlaması</li>
-</ul>
+<section class="sec">
+<h2><span class="idx" aria-hidden="true">01</span><span data-l="en">What I do</span><span data-l="tr" hidden>Çalışma alanlarım</span></h2>
+<div class="areas">
+<div class="area">
+<p class="tag"><span data-l="en">Main focus</span><span data-l="tr" hidden>Ana odak</span></p>
+<h3><span data-l="en">Interventional pulmonology</span><span data-l="tr" hidden>Girişimsel pulmonoloji</span></h3>
+<p class="desc" data-l="en">Diagnostic and therapeutic bronchoscopy, EBUS, endobronchial coil lung-volume reduction, thoracic ultrasound</p>
+<p class="desc" data-l="tr" hidden>Tanısal ve tedavi amaçlı bronkoskopi, EBUS, endobronşiyal coil ile akciğer hacim küçültme, toraks ultrasonografisi</p>
+</div>
+<div class="area">
+<p class="tag"><span data-l="en">Main focus</span><span data-l="tr" hidden>Ana odak</span></p>
+<h3><span data-l="en">Lung cancer</span><span data-l="tr" hidden>Akciğer kanseri</span></h3>
+<p class="desc" data-l="en">Diagnosis by bronchoscopy and EBUS; costs and reimbursement of lung cancer care in Türkiye</p>
+<p class="desc" data-l="tr" hidden>Bronkoskopi ve EBUS ile tanı; Türkiye’de akciğer kanseri tedavisinin maliyeti ve geri ödemesi</p>
+</div>
+<div class="area second">
+<p class="tag"><span data-l="en">Second focus</span><span data-l="tr" hidden>İkinci odak</span></p>
+<h3><span data-l="en">Interstitial lung disease</span><span data-l="tr" hidden>İnterstisyel akciğer hastalıkları</span></h3>
+<p class="desc" data-l="en">IPF and progressive pulmonary fibrosis, hypersensitivity pneumonitis, CTD-ILD, sarcoidosis; antifibrotic follow-up</p>
+<p class="desc" data-l="tr" hidden>İPF ve progresif pulmoner fibrozis, hipersensitivite pnömonisi, bağ dokusu hastalığına bağlı İAH, sarkoidoz; antifibrotik tedavi takibi</p>
+</div>
+<div class="area second wide">
+<div class="wide-text">
+<p class="tag"><span data-l="en">Second focus</span><span data-l="tr" hidden>İkinci odak</span></p>
+<h3><span data-l="en">Clinical database research</span><span data-l="tr" hidden>Klinik veri tabanı araştırmaları</span></h3>
+<p class="desc" data-l="en">MIMIC-IV, eICU, PhysioNet resources; latent-class and trajectory models; STROBE/TRIPOD reporting</p>
+<p class="desc" data-l="tr" hidden>MIMIC-IV, eICU, PhysioNet kaynakları; latent sınıf ve seyir (trajectory) modelleri; STROBE/TRIPOD raporlaması</p>
+</div>
+<div class="plot"><svg viewBox="0 0 900 300" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" style="display: block">
+<rect width="900" height="300" fill="#0A1015"></rect>
+<g stroke="#1A2830" stroke-width="1" fill="none"><path d="M56 70H872"></path><path d="M56 128H872"></path><path d="M56 186H872"></path><path d="M56 244H872"></path><path d="M219.2 34V268" stroke-dasharray="2 4"></path><path d="M382.4 34V268" stroke-dasharray="2 4"></path><path d="M545.6 34V268" stroke-dasharray="2 4"></path><path d="M708.8 34V268" stroke-dasharray="2 4"></path><path d="M872.0 34V268" stroke-dasharray="2 4"></path></g>
+<path d="M56 268H872M56 34V268" stroke="#34474F" stroke-width="2" fill="none"></path>
+<path d="M56.0 62.2 L69.6 62.3 L83.2 62.4 L96.8 62.6 L110.4 62.8 L124.0 63.1 L137.6 63.5 L151.2 63.9 L164.8 64.5 L178.4 65.0 L192.0 65.7 L205.6 66.6 L219.2 67.5 L232.8 68.5 L246.4 69.7 L260.0 71.1 L273.6 72.6 L287.2 74.3 L300.8 76.3 L314.4 78.4 L328.0 80.7 L341.6 83.3 L355.2 86.1 L368.8 89.2 L382.4 92.5 L396.0 96.0 L409.6 99.8 L423.2 103.8 L436.8 108.0 L450.4 112.3 L464.0 116.8 L477.6 121.3 L491.2 126.0 L504.8 130.7 L518.4 135.3 L532.0 139.9 L545.6 144.4 L559.2 148.8 L572.8 153.0 L586.4 157.1 L600.0 160.9 L613.6 164.5 L627.2 167.9 L640.8 171.0 L654.4 173.9 L668.0 176.6 L681.6 179.0 L695.2 181.2 L708.8 183.1 L722.4 184.9 L736.0 186.5 L749.6 187.9 L763.2 189.2 L776.8 190.3 L790.4 191.2 L804.0 192.1 L817.6 192.8 L831.2 193.4 L844.8 193.9 L858.4 194.4 L872.0 194.8 L872.0 236.8 L858.4 236.0 L844.8 235.2 L831.2 234.3 L817.6 233.3 L804.0 232.2 L790.4 231.0 L776.8 229.7 L763.2 228.2 L749.6 226.6 L736.0 224.8 L722.4 222.9 L708.8 220.7 L695.2 218.4 L681.6 215.8 L668.0 213.1 L654.4 210.0 L640.8 206.8 L627.2 203.3 L613.6 199.5 L600.0 195.6 L586.4 191.4 L572.8 187.0 L559.2 182.4 L545.6 177.6 L532.0 172.8 L518.4 167.8 L504.8 162.8 L491.2 157.7 L477.6 152.7 L464.0 147.8 L450.4 142.9 L436.8 138.2 L423.2 133.7 L409.6 129.3 L396.0 125.2 L382.4 121.3 L368.8 117.6 L355.2 114.2 L341.6 111.0 L328.0 108.1 L314.4 105.4 L300.8 102.9 L287.2 100.6 L273.6 98.5 L260.0 96.6 L246.4 94.9 L232.8 93.3 L219.2 91.9 L205.6 90.6 L192.0 89.4 L178.4 88.3 L164.8 87.4 L151.2 86.5 L137.6 85.7 L124.0 85.0 L110.4 84.3 L96.8 83.7 L83.2 83.1 L69.6 82.6 L56.0 82.2Z" fill="#93A7B0" fill-opacity="0.1"></path>
+<path d="M56.0 161.0 L69.6 160.8 L83.2 160.5 L96.8 160.3 L110.4 160.0 L124.0 159.8 L137.6 159.5 L151.2 159.3 L164.8 159.0 L178.4 158.8 L192.0 158.5 L205.6 158.3 L219.2 158.0 L232.8 157.8 L246.4 157.5 L260.0 157.3 L273.6 157.1 L287.2 156.8 L300.8 156.6 L314.4 156.3 L328.0 156.1 L341.6 155.8 L355.2 155.6 L368.8 155.3 L382.4 155.1 L396.0 154.8 L409.6 154.6 L423.2 154.3 L436.8 154.1 L450.4 153.9 L464.0 153.6 L477.6 153.4 L491.2 153.1 L504.8 152.9 L518.4 152.6 L532.0 152.4 L545.6 152.1 L559.2 151.9 L572.8 151.6 L586.4 151.4 L600.0 151.1 L613.6 150.9 L627.2 150.6 L640.8 150.4 L654.4 150.2 L668.0 149.9 L681.6 149.7 L695.2 149.4 L708.8 149.2 L722.4 148.9 L736.0 148.7 L749.6 148.4 L763.2 148.2 L776.8 147.9 L790.4 147.7 L804.0 147.4 L817.6 147.2 L831.2 146.9 L844.8 146.7 L858.4 146.5 L872.0 146.2 L872.0 174.2 L858.4 174.3 L844.8 174.4 L831.2 174.4 L817.6 174.5 L804.0 174.6 L790.4 174.7 L776.8 174.8 L763.2 174.8 L749.6 174.9 L736.0 175.0 L722.4 175.1 L708.8 175.2 L695.2 175.2 L681.6 175.3 L668.0 175.4 L654.4 175.5 L640.8 175.6 L627.2 175.6 L613.6 175.7 L600.0 175.8 L586.4 175.9 L572.8 176.0 L559.2 176.0 L545.6 176.1 L532.0 176.2 L518.4 176.3 L504.8 176.4 L491.2 176.4 L477.6 176.5 L464.0 176.6 L450.4 176.7 L436.8 176.8 L423.2 176.8 L409.6 176.9 L396.0 177.0 L382.4 177.1 L368.8 177.2 L355.2 177.2 L341.6 177.3 L328.0 177.4 L314.4 177.5 L300.8 177.6 L287.2 177.6 L273.6 177.7 L260.0 177.8 L246.4 177.9 L232.8 178.0 L219.2 178.0 L205.6 178.1 L192.0 178.2 L178.4 178.3 L164.8 178.4 L151.2 178.4 L137.6 178.5 L124.0 178.6 L110.4 178.7 L96.8 178.8 L83.2 178.8 L69.6 178.9 L56.0 179.0Z" fill="#DDE7EB" fill-opacity="0.08"></path>
+<path d="M56.0 224.1 L69.6 223.6 L83.2 223.0 L96.8 222.3 L110.4 221.6 L124.0 220.8 L137.6 219.9 L151.2 218.9 L164.8 217.7 L178.4 216.4 L192.0 214.9 L205.6 213.3 L219.2 211.4 L232.8 209.3 L246.4 206.9 L260.0 204.2 L273.6 201.1 L287.2 197.8 L300.8 194.0 L314.4 189.9 L328.0 185.4 L341.6 180.5 L355.2 175.3 L368.8 169.7 L382.4 163.8 L396.0 157.6 L409.6 151.2 L423.2 144.8 L436.8 138.2 L450.4 131.8 L464.0 125.4 L477.6 119.2 L491.2 113.3 L504.8 107.7 L518.4 102.5 L532.0 97.6 L545.6 93.1 L559.2 89.0 L572.8 85.2 L586.4 81.9 L600.0 78.8 L613.6 76.1 L627.2 73.7 L640.8 71.6 L654.4 69.7 L668.0 68.1 L681.6 66.6 L695.2 65.3 L708.8 64.1 L722.4 63.1 L736.0 62.2 L749.6 61.4 L763.2 60.7 L776.8 60.0 L790.4 59.4 L804.0 58.9 L817.6 58.4 L831.2 58.0 L844.8 57.6 L858.4 57.2 L872.0 56.9 L872.0 100.9 L858.4 100.8 L844.8 100.8 L831.2 100.8 L817.6 100.8 L804.0 100.9 L790.4 101.0 L776.8 101.2 L763.2 101.5 L749.6 101.8 L736.0 102.2 L722.4 102.7 L708.8 103.3 L695.2 104.1 L681.6 105.0 L668.0 106.1 L654.4 107.3 L640.8 108.8 L627.2 110.5 L613.6 112.5 L600.0 114.8 L586.4 117.5 L572.8 120.4 L559.2 123.8 L545.6 127.5 L532.0 131.6 L518.4 136.1 L504.8 140.9 L491.2 146.1 L477.6 151.6 L464.0 157.4 L450.4 163.4 L436.8 169.4 L423.2 175.6 L409.6 181.6 L396.0 187.6 L382.4 193.4 L368.8 198.9 L355.2 204.1 L341.6 208.9 L328.0 213.4 L314.4 217.5 L300.8 221.2 L287.2 224.6 L273.6 227.5 L260.0 230.2 L246.4 232.5 L232.8 234.5 L219.2 236.2 L205.6 237.7 L192.0 238.9 L178.4 240.0 L164.8 240.9 L151.2 241.7 L137.6 242.3 L124.0 242.8 L110.4 243.2 L96.8 243.5 L83.2 243.8 L69.6 244.0 L56.0 244.1Z" fill="#E8B44A" fill-opacity="0.13"></path>
+<path d="M56.0 72.2 L69.6 72.4 L83.2 72.8 L96.8 73.2 L110.4 73.6 L124.0 74.1 L137.6 74.6 L151.2 75.2 L164.8 75.9 L178.4 76.7 L192.0 77.6 L205.6 78.6 L219.2 79.7 L232.8 80.9 L246.4 82.3 L260.0 83.8 L273.6 85.6 L287.2 87.5 L300.8 89.6 L314.4 91.9 L328.0 94.4 L341.6 97.2 L355.2 100.2 L368.8 103.4 L382.4 106.9 L396.0 110.6 L409.6 114.6 L423.2 118.7 L436.8 123.1 L450.4 127.6 L464.0 132.3 L477.6 137.0 L491.2 141.9 L504.8 146.7 L518.4 151.6 L532.0 156.3 L545.6 161.0 L559.2 165.6 L572.8 170.0 L586.4 174.2 L600.0 178.2 L613.6 182.0 L627.2 185.6 L640.8 188.9 L654.4 192.0 L668.0 194.8 L681.6 197.4 L695.2 199.8 L708.8 201.9 L722.4 203.9 L736.0 205.7 L749.6 207.3 L763.2 208.7 L776.8 210.0 L790.4 211.1 L804.0 212.1 L817.6 213.1 L831.2 213.9 L844.8 214.6 L858.4 215.2 L872.0 215.8" stroke="#93A7B0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M56.0 170.0 L69.6 169.8 L83.2 169.7 L96.8 169.5 L110.4 169.3 L124.0 169.2 L137.6 169.0 L151.2 168.9 L164.8 168.7 L178.4 168.5 L192.0 168.4 L205.6 168.2 L219.2 168.0 L232.8 167.9 L246.4 167.7 L260.0 167.6 L273.6 167.4 L287.2 167.2 L300.8 167.1 L314.4 166.9 L328.0 166.7 L341.6 166.6 L355.2 166.4 L368.8 166.2 L382.4 166.1 L396.0 165.9 L409.6 165.8 L423.2 165.6 L436.8 165.4 L450.4 165.3 L464.0 165.1 L477.6 164.9 L491.2 164.8 L504.8 164.6 L518.4 164.5 L532.0 164.3 L545.6 164.1 L559.2 164.0 L572.8 163.8 L586.4 163.6 L600.0 163.5 L613.6 163.3 L627.2 163.1 L640.8 163.0 L654.4 162.8 L668.0 162.7 L681.6 162.5 L695.2 162.3 L708.8 162.2 L722.4 162.0 L736.0 161.8 L749.6 161.7 L763.2 161.5 L776.8 161.4 L790.4 161.2 L804.0 161.0 L817.6 160.9 L831.2 160.7 L844.8 160.5 L858.4 160.4 L872.0 160.2" stroke="#DDE7EB" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M56.0 234.1 L69.6 233.8 L83.2 233.4 L96.8 232.9 L110.4 232.4 L124.0 231.8 L137.6 231.1 L151.2 230.3 L164.8 229.3 L178.4 228.2 L192.0 226.9 L205.6 225.5 L219.2 223.8 L232.8 221.9 L246.4 219.7 L260.0 217.2 L273.6 214.3 L287.2 211.2 L300.8 207.6 L314.4 203.7 L328.0 199.4 L341.6 194.7 L355.2 189.7 L368.8 184.3 L382.4 178.6 L396.0 172.6 L409.6 166.4 L423.2 160.2 L436.8 153.8 L450.4 147.6 L464.0 141.4 L477.6 135.4 L491.2 129.7 L504.8 124.3 L518.4 119.3 L532.0 114.6 L545.6 110.3 L559.2 106.4 L572.8 102.8 L586.4 99.7 L600.0 96.8 L613.6 94.3 L627.2 92.1 L640.8 90.2 L654.4 88.5 L668.0 87.1 L681.6 85.8 L695.2 84.7 L708.8 83.7 L722.4 82.9 L736.0 82.2 L749.6 81.6 L763.2 81.1 L776.8 80.6 L790.4 80.2 L804.0 79.9 L817.6 79.6 L831.2 79.4 L844.8 79.2 L858.4 79.0 L872.0 78.9" stroke="#E8B44A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+<g fill="#0A1015" stroke-width="2.5"><g stroke="#93A7B0"><circle cx="56.0" cy="72.2" r="5"></circle><circle cx="219.2" cy="79.7" r="5"></circle><circle cx="382.4" cy="106.9" r="5"></circle><circle cx="545.6" cy="161.0" r="5"></circle><circle cx="708.8" cy="201.9" r="5"></circle><circle cx="872.0" cy="215.8" r="5"></circle></g><g stroke="#DDE7EB"><circle cx="56.0" cy="170.0" r="5"></circle><circle cx="219.2" cy="168.0" r="5"></circle><circle cx="382.4" cy="166.1" r="5"></circle><circle cx="545.6" cy="164.1" r="5"></circle><circle cx="708.8" cy="162.2" r="5"></circle><circle cx="872.0" cy="160.2" r="5"></circle></g><g stroke="#E8B44A"><circle cx="56.0" cy="234.1" r="5"></circle><circle cx="219.2" cy="223.8" r="5"></circle><circle cx="382.4" cy="178.6" r="5"></circle><circle cx="545.6" cy="110.3" r="5"></circle><circle cx="708.8" cy="83.7" r="5"></circle><circle cx="872.0" cy="78.9" r="5"></circle></g></g>
+</svg><span class="plot-tag"><span data-l="en">Trajectory model</span><span data-l="tr" hidden>Seyir modeli</span></span></div>
+</div>
+</div>
+<p class="note" data-l="en">The trajectory plot is an illustration, not study data.</p>
+<p class="note" data-l="tr" hidden>Seyir grafiği temsilidir; çalışma verisi değildir.</p>
 </section>
 
+<div class="pair">
 <section>
-<h2><span data-l="en">Credentials</span><span data-l="tr" hidden>Unvan ve belgeler</span></h2>
-<ul class="plain" data-l="en">
-<li><span lang="tr">Doçent</span> (Associate Professor), Pulmonary Medicine — <span lang="tr">Üniversitelerarası Kurul</span>, January 2026</li>
-<li>Turkish Board of Pulmonary Medicine — board certified, 2023</li>
-<li>ERS European Examination in Adult Respiratory Medicine (HERMES) — passed, 2022</li>
-<li>Specialist in Pulmonary Medicine and Tuberculosis — Ministry of Health, 2021</li>
-<li>MD — Hacettepe University, English-medium programme, 2015</li>
-</ul>
-<ul class="plain" data-l="tr" hidden>
-<li>Doçent, Göğüs Hastalıkları — Üniversitelerarası Kurul, Ocak 2026</li>
-<li>Türk Göğüs Hastalıkları Yeterlik Kurulu — yeterlik belgesi, 2023</li>
-<li><span lang="en">ERS European Examination in Adult Respiratory Medicine</span> (HERMES) — başarılı, 2022</li>
-<li>Göğüs Hastalıkları ve Tüberküloz Uzmanı — Sağlık Bakanlığı, 2021</li>
-<li>Tıp Doktoru — Hacettepe Üniversitesi, İngilizce tıp programı, 2015</li>
+<h2><span class="idx" aria-hidden="true">02</span><span data-l="en">Credentials</span><span data-l="tr" hidden>Unvan ve belgeler</span></h2>
+<ol class="timeline">
+<li class="now"><span class="yr">2026</span><span data-l="en"><span lang="tr">Doçent</span> (Associate Professor), Pulmonary Medicine — <span lang="tr">Üniversitelerarası Kurul</span>, January 2026</span><span data-l="tr" hidden>Doçent, Göğüs Hastalıkları — Üniversitelerarası Kurul, Ocak 2026</span></li>
+<li><span class="yr">2023</span><span data-l="en">Turkish Board of Pulmonary Medicine — board certified</span><span data-l="tr" hidden>Türk Göğüs Hastalıkları Yeterlik Kurulu — yeterlik belgesi</span></li>
+<li><span class="yr">2022</span><span data-l="en">ERS European Examination in Adult Respiratory Medicine (HERMES) — passed</span><span data-l="tr" hidden><span lang="en">ERS European Examination in Adult Respiratory Medicine</span> (HERMES) — başarılı</span></li>
+<li><span class="yr">2021</span><span data-l="en">Specialist in Pulmonary Medicine and Tuberculosis — Ministry of Health</span><span data-l="tr" hidden>Göğüs Hastalıkları ve Tüberküloz Uzmanı — Sağlık Bakanlığı</span></li>
+<li><span class="yr">2015</span><span data-l="en">MD — Hacettepe University, English-medium programme</span><span data-l="tr" hidden>Tıp Doktoru — Hacettepe Üniversitesi, İngilizce tıp programı</span></li>
+</ol>
+</section>
+<section>
+<h2><span class="idx" aria-hidden="true">03</span><span data-l="en">Editorial work</span><span data-l="tr" hidden>Editörlük çalışmaları</span></h2>
+<ul class="ed">
+<li class="key"><span class="rtag"><span data-l="en">Editor</span><span data-l="tr" hidden>Editör</span></span><span lang="en">Journal of Medicine and Palliative Care</span></li>
+<li class="key"><span class="rtag"><span data-l="en">Section Editor</span><span data-l="tr" hidden>Bölüm Editörü</span></span><span lang="en">Journal of Health Sciences and Medicine</span></li>
+<li><span class="rtag"><span data-l="en">Peer reviewer</span><span data-l="tr" hidden>Hakem</span></span><span data-l="en">Cureus, Anatolian Current Medical Journal, Journal of Health Sciences and Medicine and Journal of Medicine and Palliative Care</span><span data-l="tr" hidden><span lang="en">Cureus</span>, <span lang="en">Anatolian Current Medical Journal</span>, <span lang="en">Journal of Health Sciences and Medicine</span> ve <span lang="en">Journal of Medicine and Palliative Care</span></span></li>
 </ul>
 </section>
+</div>
 
-<section>
-<h2><span data-l="en">Publications</span><span data-l="tr" hidden>Yayınlar</span></h2>
+<section class="sec pubsec">
+<h2><span class="idx" aria-hidden="true">04</span><span data-l="en">Publications</span><span data-l="tr" hidden>Yayınlar</span></h2>
+<div class="pub-top">
+<div class="pub-sum">
 <p data-l="en">40 journal articles (27 PubMed-indexed, 2022–2025), two book chapters (Springer <i>Airway Diseases</i>, 2023) and four ERS congress abstracts. Full list on <a href="https://orcid.org/0000-0002-0968-1549">ORCID</a>.</p>
 <p data-l="tr" hidden>40 dergi makalesi (27’si PubMed’de dizinli, 2022–2025), iki kitap bölümü (Springer <i lang="en">Airway Diseases</i>, 2023) ve dört ERS kongre bildirisi. Tam liste <a href="https://orcid.org/0000-0002-0968-1549">ORCID</a>’de.</p>
-<p data-l="en">Also listed on: <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Ensarioglu+K%5BAuthor%5D">PubMed search</a> · <a href="https://dergipark.org.tr/en/pub/@kerem-ensarioglu">DergiPark</a> · <a href="https://www.cureus.com/users/444762-kerem-ensarioglu">Cureus</a></p>
-<p data-l="tr" hidden>Ayrıca: <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Ensarioglu+K%5BAuthor%5D">PubMed araması</a> · <a href="https://dergipark.org.tr/en/pub/@kerem-ensarioglu">DergiPark</a> · <a href="https://www.cureus.com/users/444762-kerem-ensarioglu">Cureus</a></p>
-<h3><span data-l="en">Selected publications</span><span data-l="tr" hidden>Seçilmiş yayınlar</span></h3>
+<p class="also" data-l="en">Also listed on <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Ensarioglu+K%5BAuthor%5D">PubMed search</a>, <a href="https://dergipark.org.tr/en/pub/@kerem-ensarioglu">DergiPark</a> and <a href="https://www.cureus.com/users/444762-kerem-ensarioglu">Cureus</a>.</p>
+<p class="also" data-l="tr" hidden>Ayrıca: <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Ensarioglu+K%5BAuthor%5D">PubMed araması</a>, <a href="https://dergipark.org.tr/en/pub/@kerem-ensarioglu">DergiPark</a> ve <a href="https://www.cureus.com/users/444762-kerem-ensarioglu">Cureus</a>.</p>
+</div>
+<figure class="chart">
+<figcaption><span data-l="en">PubMed-indexed papers by year</span><span data-l="tr" hidden>Yıllara göre PubMed’de dizinli makaleler</span></figcaption>
+<!-- PUBCHART:START -->
+<div class="bars" aria-hidden="true"><div class="bar"><span class="bar-v">3</span><span class="bar-b" style="height: 20px"></span></div><div class="bar"><span class="bar-v">1</span><span class="bar-b" style="height: 7px"></span></div><div class="bar"><span class="bar-v">5</span><span class="bar-b" style="height: 33px"></span></div><div class="bar"><span class="bar-v">18</span><span class="bar-b latest" style="height: 120px"></span></div></div>
+<div class="yrs" aria-hidden="true"><span>2022</span><span>2023</span><span>2024</span><span>2025</span></div>
+<ul class="sr"><li>2022: 3</li><li>2023: 1</li><li>2024: 5</li><li>2025: 18</li></ul>
+<!-- PUBCHART:END -->
+</figure>
+</div>
 <!-- PUBS:START -->
 <ol class="pubs" lang="en">
-<li><strong>Ensarioğlu K</strong>, Kurt B. Endobronchial coil lung volume reduction performed on patients with emphysema dominant COPD: Long term follow-up results. <i lang="tr">Tuberküloz ve Toraks</i> 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/38676593/">PMID 38676593</a></li>
-<li><strong>Ensarioğlu K</strong>, Özyürek BA, Dinçer M, Gümüşler HA. Reimbursement of Lung Cancer in Turkey: A 10-Year Single Center Study. <i>Cancer Medicine</i> 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/40643563/">PMID 40643563</a></li>
-<li><strong>Ensarioğlu K</strong>, Özyürek BA, Dinçer M, Özdemirel TŞ, Gümüşler HA. Healthcare Expenditures and Reimbursement Patterns in Idiopathic Pulmonary Fibrosis: A 10-Year Single-Center Retrospective Cohort Study in Turkey. <i>Healthcare</i> 2025. <a href="https://pubmed.ncbi.nlm.nih.gov/40941435/">PMID 40941435</a></li>
-<li><strong>Ensarioğlu K</strong>, Erdöl AK, Kurt B, Şencan İ, Fırat İH, Yüceege MB, Akçalı SD. Coronavirus Disease 2019 Pneumonia Scoring System Comparison and Risk Factors. <i>Turkish Thoracic Journal</i> 2022. <a href="https://pubmed.ncbi.nlm.nih.gov/35943073/">PMID 35943073</a></li>
-<li>Yurtseven A, <strong>Ensarioğlu K</strong>. The Prognostic Value of Total Blood Count Parameter Ratios in Acute Pulmonary Embolism. <i>Diagnostics</i> 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/39795599/">PMID 39795599</a></li>
+<li><span class="py">2024</span><div class="pb"><span class="chip key"><span data-l="en">Interventional pulmonology</span><span data-l="tr" lang="tr" hidden>Girişimsel pulmonoloji</span></span><p class="pt">Endobronchial coil lung volume reduction performed on patients with emphysema dominant COPD: Long term follow-up results</p><p class="pa"><strong>Ensarioğlu K</strong>, Kurt B. <i lang="tr">Tuberküloz ve Toraks</i>. <a href="https://pubmed.ncbi.nlm.nih.gov/38676593/">PMID 38676593</a></p></div></li>
+<li><span class="py">2025</span><div class="pb"><span class="chip key"><span data-l="en">Lung cancer</span><span data-l="tr" lang="tr" hidden>Akciğer kanseri</span></span><p class="pt">Reimbursement of Lung Cancer in Turkey: A 10-Year Single Center Study</p><p class="pa"><strong>Ensarioğlu K</strong>, Özyürek BA, Dinçer M, Gümüşler HA. <i>Cancer Medicine</i>. <a href="https://pubmed.ncbi.nlm.nih.gov/40643563/">PMID 40643563</a></p></div></li>
+<li><span class="py">2025</span><div class="pb"><span class="chip"><span data-l="en">Interstitial lung disease</span><span data-l="tr" lang="tr" hidden>İnterstisyel akciğer hastalıkları</span></span><p class="pt">Healthcare Expenditures and Reimbursement Patterns in Idiopathic Pulmonary Fibrosis: A 10-Year Single-Center Retrospective Cohort Study in Turkey</p><p class="pa"><strong>Ensarioğlu K</strong>, Özyürek BA, Dinçer M, Özdemirel TŞ, Gümüşler HA. <i>Healthcare</i>. <a href="https://pubmed.ncbi.nlm.nih.gov/40941435/">PMID 40941435</a></p></div></li>
+<li><span class="py">2022</span><div class="pb"><span class="chip"><span data-l="en">COVID-19 pneumonia</span><span data-l="tr" lang="tr" hidden>COVID-19 pnömonisi</span></span><p class="pt">Coronavirus Disease 2019 Pneumonia Scoring System Comparison and Risk Factors</p><p class="pa"><strong>Ensarioğlu K</strong>, Erdöl AK, Kurt B, Şencan İ, Fırat İH, Yüceege MB, Akçalı SD. <i>Turkish Thoracic Journal</i>. <a href="https://pubmed.ncbi.nlm.nih.gov/35943073/">PMID 35943073</a></p></div></li>
+<li><span class="py">2024</span><div class="pb"><span class="chip"><span data-l="en">Pulmonary embolism</span><span data-l="tr" lang="tr" hidden>Pulmoner emboli</span></span><p class="pt">The Prognostic Value of Total Blood Count Parameter Ratios in Acute Pulmonary Embolism</p><p class="pa">Yurtseven A, <strong>Ensarioğlu K</strong>. <i>Diagnostics</i>. <a href="https://pubmed.ncbi.nlm.nih.gov/39795599/">PMID 39795599</a></p></div></li>
 </ol>
 <!-- PUBS:END -->
 </section>
 
-<section>
-<h2><span data-l="en">Editorial work</span><span data-l="tr" hidden>Editörlük çalışmaları</span></h2>
-<ul class="plain" data-l="en">
-<li>Editor, Journal of Medicine and Palliative Care</li>
-<li>Section Editor, Journal of Health Sciences and Medicine</li>
-<li>Peer reviewer for Cureus, Anatolian Current Medical Journal, Journal of Health Sciences and Medicine and Journal of Medicine and Palliative Care</li>
-</ul>
-<ul class="plain" data-l="tr" hidden>
-<li>Editör, <span lang="en">Journal of Medicine and Palliative Care</span></li>
-<li>Bölüm Editörü, <span lang="en">Journal of Health Sciences and Medicine</span></li>
-<li>Hakem: <span lang="en">Cureus</span>, <span lang="en">Anatolian Current Medical Journal</span>, <span lang="en">Journal of Health Sciences and Medicine</span> ve <span lang="en">Journal of Medicine and Palliative Care</span></li>
-</ul>
-</section>
-
-<section>
-<h2><span data-l="en">Contact</span><span data-l="tr" hidden>İletişim</span></h2>
-<p data-l="en">Open to collaboration on interventional pulmonology, lung cancer and ILD studies and on MIMIC-IV/eICU database research; physician expert and advisory work.</p>
-<p data-l="tr" hidden>Girişimsel pulmonoloji, akciğer kanseri ve İAH çalışmalarında ve MIMIC-IV/eICU veri tabanı araştırmalarında iş birliğine açığım.</p>
-<ul class="contact">
-<li><span data-l="en">Email</span><span data-l="tr" hidden>E-posta</span>: <a id="mail" hidden></a><noscript>kerem.ensarioglu [at] gmail.com</noscript></li>
-<li>ORCID iD: <a href="https://orcid.org/0000-0002-0968-1549">0000-0002-0968-1549</a></li>
+<section class="contact">
+<h2><span class="idx" aria-hidden="true">05</span><span data-l="en">Contact</span><span data-l="tr" hidden>İletişim</span></h2>
+<p class="cline" data-l="en">Open to collaboration on interventional pulmonology, lung cancer and ILD studies and on MIMIC-IV/eICU database research; physician expert and advisory work.</p>
+<p class="cline" data-l="tr" hidden>Girişimsel pulmonoloji, akciğer kanseri ve İAH çalışmalarında ve MIMIC-IV/eICU veri tabanı araştırmalarında iş birliğine açığım.</p>
+<ul class="cta">
 <li><a class="btn" href="cv.pdf"><span data-l="en">CV (PDF)</span><span data-l="tr" hidden>Özgeçmiş (PDF)</span></a></li>
+<li class="mail-item"><span class="lbl"><span data-l="en">Email</span><span data-l="tr" hidden>E-posta</span>:</span> <a id="mail" hidden></a><noscript>kerem.ensarioglu [at] gmail.com</noscript></li>
+<li><span class="lbl">ORCID iD:</span> <a href="https://orcid.org/0000-0002-0968-1549">0000-0002-0968-1549</a></li>
 </ul>
 </section>
 </main>
